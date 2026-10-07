@@ -1,0 +1,270 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HiHotel</title>
+  <meta name="description" content="A HiHotel constrói os sistemas que ajudam o hotel a lembrar de cada hóspede e a organizar o trabalho de quem o recebe. Em uso no Duke Beach Hotel, em Maresias.">
+  <meta name="theme-color" content="#14283C">
+  <meta name="color-scheme" content="light">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:title" content="HiHotel">
+  <meta property="og:description" content="Sistemas que ajudam o hotel a lembrar de cada hóspede e a organizar o trabalho de quem o recebe.">
+  <meta property="og:url" content="https://hihotel.com.br/">
+  <link rel="canonical" href="https://hihotel.com.br/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400&family=Newsreader:opsz,wght@6..72,400;6..72,500&display=swap">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "HiHotel",
+    "legalName": "Fanjul Rossigalli Consultoria em Tecnologia da Informação LTDA",
+    "url": "https://hihotel.com.br/",
+    "email": "alejandro@hihotel.com.br",
+    "foundingDate": "2026-04-24",
+    "founder": [
+      { "@type": "Person", "name": "Alejandro Fanjul", "sameAs": "https://www.linkedin.com/in/alejandro-fanjul-a4676533/" },
+      { "@type": "Person", "name": "Matheus Rossigalli", "sameAs": "https://www.linkedin.com/in/rossigalli/" }
+    ]
+  }
+  </script>
+  <style>
+    :root {
+      --creme: #ece8d6;
+      --petroleo: #14283c;
+      --linha: rgba(20, 40, 60, 0.22);
+      --chartreuse: #c9c83a;
+      --creme-sobre-petroleo: #d9d6c6;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --sans: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --margem: clamp(20px, 6vw, 88px);
+      --largura: 1120px;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; }
+
+    html {
+      background: var(--creme);
+      color: var(--petroleo);
+      -webkit-text-size-adjust: 100%;
+    }
+
+    body {
+      margin: 0;
+      background: var(--creme);
+      font-family: var(--sans);
+      font-size: 1.0625rem;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; text-underline-offset: 0.18em; text-decoration-thickness: 1px; transition: color 150ms ease, text-decoration-color 150ms ease; }
+    a:hover { text-decoration-thickness: 2px; }
+    a:focus-visible { outline: 2px solid currentColor; outline-offset: 3px; }
+
+    .faixa {
+      max-width: var(--largura);
+      margin: 0 auto;
+      padding-inline: var(--margem);
+    }
+
+    /* Topo */
+    .topo {
+      display: flex;
+      justify-content: flex-end;
+      gap: 24px;
+      padding-block: 24px;
+      font-size: 0.9375rem;
+    }
+    .topo a { text-decoration: none; }
+    .topo a:hover { text-decoration: underline; }
+
+    /* Abertura */
+    .abertura { padding-block: clamp(48px, 12vh, 140px) clamp(56px, 10vh, 120px); }
+    .marca {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 400;
+      font-size: clamp(4rem, 15vw, 10.5rem);
+      line-height: 0.92;
+      letter-spacing: -0.025em;
+    }
+    .frase {
+      margin: clamp(24px, 4vw, 40px) 0 0;
+      max-width: 24ch;
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 3.3vw, 2.5rem);
+      line-height: 1.22;
+      letter-spacing: -0.005em;
+    }
+
+    /* Seções */
+    .secao {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 16px;
+      padding-block: clamp(40px, 7vw, 80px);
+      border-top: 1px solid var(--linha);
+    }
+    .secao h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(1.5rem, 2.4vw, 1.875rem);
+      line-height: 1.2;
+    }
+    .corpo { max-width: 64ch; }
+    .corpo > p { margin: 0 0 1em; }
+    .corpo > p:last-child { margin-bottom: 0; }
+
+    @media (min-width: 820px) {
+      .secao { grid-template-columns: minmax(0, 4fr) minmax(0, 8fr); gap: 48px; }
+    }
+
+    /* Duke */
+    .sistemas { list-style: none; margin: 32px 0 0; padding: 0; display: grid; gap: 28px; }
+    .sistemas h3, .pessoas h3 {
+      margin: 0 0 6px;
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: 1.3125rem;
+      line-height: 1.3;
+    }
+    .sistemas p, .pessoas p { margin: 0; }
+    .pessoas .perfil { margin-top: 8px; font-size: 0.9375rem; }
+
+    /* Quem somos */
+    .pessoas { display: grid; gap: 28px; margin-top: 32px; }
+    @media (min-width: 620px) {
+      .pessoas { grid-template-columns: 1fr 1fr; gap: 40px; }
+    }
+
+    /* Fechamento em petróleo: o único lugar do chartreuse */
+    .fechamento {
+      background: var(--petroleo);
+      color: var(--creme);
+    }
+    .fechamento .secao { border-top: 1px solid rgba(236, 232, 214, 0.18); }
+    .fechamento .secao:first-child { border-top: 0; }
+    .fechamento h2 { color: var(--chartreuse); }
+    .email {
+      display: inline-block;
+      font-family: var(--serif);
+      font-size: clamp(1.5rem, 4.4vw, 3rem);
+      line-height: 1.15;
+      overflow-wrap: anywhere;
+      text-decoration-color: var(--chartreuse);
+      text-decoration-thickness: 2px;
+    }
+    .email:hover { color: var(--chartreuse); }
+    .fechamento .corpo { color: var(--creme-sobre-petroleo); }
+    .fechamento .corpo a { color: var(--creme); text-decoration-color: var(--chartreuse); }
+    .fechamento .corpo a:hover { color: var(--chartreuse); }
+
+    .rodape {
+      font-size: 0.875rem;
+      color: var(--creme-sobre-petroleo);
+    }
+    .rodape-interno {
+      padding-block: 32px 40px;
+      border-top: 1px solid rgba(236, 232, 214, 0.18);
+    }
+    .rodape p { margin: 0; }
+    .rodape .marca-rodape { color: var(--chartreuse); font-family: var(--serif); font-size: 1.125rem; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <header class="faixa topo">
+    <a href="#contato">Contato</a>
+    <a href="#english" lang="en">English</a>
+  </header>
+
+  <main>
+    <section class="faixa abertura" aria-labelledby="marca">
+      <h1 class="marca" id="marca">HiHotel</h1>
+      <p class="frase">Construímos os sistemas que ajudam o hotel a lembrar de cada hóspede e a organizar o trabalho de quem o recebe.</p>
+    </section>
+
+    <div class="faixa">
+      <section class="secao" aria-labelledby="o-que-fazemos">
+        <h2 id="o-que-fazemos">O que fazemos</h2>
+        <div class="corpo">
+          <p>A maior parte dos sistemas de hotel foi feita para controlar: rastrear, medir, reportar. A hospitalidade acontece em outro lugar, na camareira que percebe o que o quarto precisa e no garçom que lembra o nome de quem chega.</p>
+          <p>A HiHotel constrói a estrutura por trás desse trabalho: o perfil de cada hóspede, com o que ele prefere e o que não pode comer; o pedido que chega ao departamento certo; os números que a gestão precisa ver. A tecnologia fica invisível e as pessoas aparecem.</p>
+          <p>O hotel opera, e os dados continuam dele.</p>
+        </div>
+      </section>
+
+      <section class="secao" aria-labelledby="duke">
+        <h2 id="duke">No Duke Beach Hotel</h2>
+        <div class="corpo">
+          <p>Nosso primeiro cliente é o Duke Beach Hotel, em Maresias, no litoral de São Paulo. Três sistemas da HiHotel estão em uso lá hoje.</p>
+          <ul class="sistemas">
+            <li>
+              <h3>Na TV do quarto</h3>
+              <p>O hóspede é recebido pelo nome, vê o que o hotel oferece, conecta ao Wi-Fi por QR code e abre os aplicativos de streaming, em português, inglês ou espanhol. Em uso desde maio de 2026.</p>
+            </li>
+            <li>
+              <h3>No cardápio</h3>
+              <p>Os cardápios do restaurante, do bar, do room service, da carta de vinhos e do café da manhã são editados num lugar só e publicados em três idiomas, em <a href="https://menu.dukebeach.com.br">menu.dukebeach.com.br</a>.</p>
+            </li>
+            <li>
+              <h3>Na operação</h3>
+              <p>A equipe registra o pedido especial do hóspede, um jantar, uma decoração, um bolo, e cada departamento recebe a sua parte. Quem atende vê o perfil de cada hóspede, com as preferências que ele contou antes de chegar. A gestão acompanha as vendas e os preços da concorrência.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="secao" aria-labelledby="quem-somos">
+        <h2 id="quem-somos">Quem somos</h2>
+        <div class="corpo">
+          <p>A HiHotel nasceu dentro do Duke. O Alejandro começou a criar as primeiras soluções lá; o Matheus chegou depois, viu o padrão, e os dois decidiram transformar isso numa empresa, aberta em abril de 2026.</p>
+          <div class="pessoas">
+            <div>
+              <h3>Alejandro Fanjul</h3>
+              <p>Sócio. Cuida do sistema de operação do hotel e da arquitetura.</p>
+              <p class="perfil"><a href="https://www.linkedin.com/in/alejandro-fanjul-a4676533/">LinkedIn</a></p>
+            </div>
+            <div>
+              <h3>Matheus Rossigalli</h3>
+              <p>Sócio. Construiu o sistema da TV dos quartos e cuida da experiência do hóspede.</p>
+              <p class="perfil"><a href="https://www.linkedin.com/in/rossigalli/">LinkedIn</a></p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="fechamento">
+      <div class="faixa">
+        <section class="secao" id="contato" aria-labelledby="contato-titulo">
+          <h2 id="contato-titulo">Contato</h2>
+          <div class="corpo">
+            <a class="email" href="mailto:alejandro@hihotel.com.br">alejandro@hihotel.com.br</a>
+          </div>
+        </section>
+
+        <section class="secao" id="english" lang="en" aria-labelledby="english-titulo">
+          <h2 id="english-titulo">In English</h2>
+          <div class="corpo">
+            <p>HiHotel builds software for hotels: the systems a hotel uses to remember each guest and to coordinate the people who serve them. Our first client is Duke Beach Hotel, in Maresias, on the coast of São Paulo, Brazil, where three of our systems are in use today: the in-room TV, the hotel’s menus in three languages, and the operations system the staff use for guest requests, guest profiles and sales reports.</p>
+            <p>Claude already runs inside that operations system. It reads the answers guests give in the pre-arrival form and turns them into structured preferences the staff can act on. HiHotel was founded in São Paulo in April 2026 by Alejandro Fanjul and Matheus Rossigalli. Write to <a href="mailto:alejandro@hihotel.com.br">alejandro@hihotel.com.br</a>.</p>
+          </div>
+        </section>
+      </div>
+
+      <footer class="faixa rodape">
+        <div class="rodape-interno">
+          <p class="marca-rodape">HiHotel</p>
+          <p>Fanjul Rossigalli Consultoria em Tecnologia da Informação LTDA · CNPJ 66.429.936/0001-40 · São Paulo, SP</p>
+        </div>
+      </footer>
+    </div>
+  </main>
+</body>
+</html>
